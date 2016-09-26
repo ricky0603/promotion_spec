@@ -12,11 +12,12 @@ class prdItem:
         pic_url = getPrdData.getPrdData().getPicurl()
         price_old = getPrdData.getPrdData().getPriceold()
         price_cur = getPrdData.getPrdData().getPricecur()
+        trace = getPrdData.getPrdData().getTrace()
 
         for i in range(0,len(title)-1):
             items.div.append(str(items.a))
             new_items = BeautifulSoup(htmlParser.unescape(str(items.div).decode('utf-8')),'lxml')
-            new_items.div.contents[i]['href'] = url[i+1]
+            new_items.div.contents[i]['href'] = url[i+1] + "?trace=" + trace
             new_items.div.contents[i].img['src'] = pic_url[i+1]
             new_items.div.contents[i].h3.string = title[i+1]
             new_items.div.contents[i].find('span','price_cur').string = unicode(price_cur[i+1])

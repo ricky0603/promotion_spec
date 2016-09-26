@@ -6,14 +6,19 @@ import HTMLParser
 
 #设置页面标题
 title = "hahahah"
+
 #设置页面描述
 desc = "lalalal"
+
 #设置banner图地址
 banner_url = "http://res.dxycdn.com/trademd/upload/pic/2016/09/18/B1474186439965hsw4tcngpe.jpg!orgin"
+
 #设置banner背景色
 banner_bgr_color = "#000000"
+
 #设置微信分享图片地址
 wx_img = "http://res.dxycdn.com/trademd/upload/pic/2016/09/18/B1474186439965hsw4tcngpe.jpg!orgin"
+
 #设置微信分享标题
 wx_title = "lalalalla"
 

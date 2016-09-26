@@ -1,8 +1,9 @@
 # -*- coding:utf-8 -*-
 import xlrd
 
-class getPrdData:
 
+class getPrdData:
+    
     prd_sheet = xlrd.open_workbook('/Users/oraLiao/projects/promotion_spec/1.xlsx')
     prd_info = prd_sheet.sheets()[0]
 
@@ -26,3 +27,6 @@ class getPrdData:
         price_cur = self.prd_info.col_values(5)
         return price_cur
 
+    def getTrace(self):
+        trace = self.prd_info.col_values(8)[1]
+        return trace
