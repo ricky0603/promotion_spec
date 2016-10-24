@@ -1,10 +1,13 @@
 # -*- coding:utf-8 -*-
+#@author liaow
 import xlrd
+from bs4 import BeautifulSoup
 
+excel_source = BeautifulSoup(open('/Users/oraLiao/projects/promotion_spec/config.xml'),'lxml').excelsource.string
 
 class getPrdData:
     
-    prd_sheet = xlrd.open_workbook('/Users/oraLiao/projects/promotion_spec/1.xlsx')
+    prd_sheet = xlrd.open_workbook(excel_source)
     prd_info = prd_sheet.sheets()[0]
 
     def getTitle(self):

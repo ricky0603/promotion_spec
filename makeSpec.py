@@ -4,23 +4,25 @@ import prdItem
 from bs4 import BeautifulSoup
 import HTMLParser
 
+page_info = BeautifulSoup(open('/Users/oraLiao/projects/promotion_spec/config.xml'),'lxml')
+
 #设置页面标题
-title = "hahahah"
+title = page_info.title.string
 
 #设置页面描述
-desc = "lalalal"
+desc = page_info.desc.string
 
 #设置banner图地址
-banner_url = "http://res.dxycdn.com/trademd/upload/pic/2016/09/18/B1474186439965hsw4tcngpe.jpg!orgin"
+banner_url = page_info.bannerurl.string
 
 #设置banner背景色
-banner_bgr_color = "#000000"
+banner_bgr_color = page_info.banner_bgr_color.string
 
 #设置微信分享图片地址
-wx_img = "http://res.dxycdn.com/trademd/upload/pic/2016/09/18/B1474186439965hsw4tcngpe.jpg!orgin"
+wx_img = page_info.wximg.string
 
 #设置微信分享标题
-wx_title = "lalalalla"
+wx_title = page_info.wxtitle.string
 
 htmlParser = HTMLParser.HTMLParser()
 html = BeautifulSoup(open('/Users/oraLiao/projects/promotion_spec/demo.html').read(),'lxml')

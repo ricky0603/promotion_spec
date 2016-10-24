@@ -29,4 +29,3 @@ class prdItem:
         return new_items.div
 
 
-
