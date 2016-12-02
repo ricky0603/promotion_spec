@@ -1,4 +1,5 @@
 #-*- coding:utf-8 -*-
+#@author liaow
 from bs4 import BeautifulSoup
 import urllib2
 
@@ -16,8 +17,5 @@ class getPicUrl:
             response = urllib2.urlopen(url)
             html = BeautifulSoup(response.read(),'lxml')
             pic_url = html.find('div','product_img').img['src']
-            
-
         return pic_url
-
 print getPicUrl().getPicUrl('33012457',1)

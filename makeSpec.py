@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+# @author liaow
 import getPrdData
 import prdItem
 from bs4 import BeautifulSoup
